@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="format-detection" content="telephone=no">
+<meta name="theme-color" content="#ffffff">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<title>背单词</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect width='16' height='16' fill='%23111111'/%3E%3C/svg%3E">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html, body { height: 100%; background: #ffffff; }
+
+  body {
+    min-height: 100vh;
+    min-height: 100svh;
+    min-height: 100dvh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    -webkit-text-size-adjust: 100%;
+    font-family: "PingFang SC", "HarmonyOS Sans SC", "Noto Sans SC", "Source Han Sans SC", "Microsoft YaHei", sans-serif;
+  }
+
+  .word {
+    color: #111111;
+    font-size: clamp(72px, 23vw, 190px);
+    font-weight: 600;
+    line-height: 1;
+    letter-spacing: 0.06em;
+    text-indent: 0.06em; /* 抵消末字右侧字距，保证视觉真正居中 */
+    text-align: center;
+    white-space: nowrap;
+    animation: rise 500ms cubic-bezier(.2, .7, .2, 1) both;
+  }
+
+  @keyframes rise {
+    from { opacity: 0; transform: translateY(8px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .word { animation: none; }
+  }
+</style>
+</head>
+<body>
+  <div class="word">背单词</div>
+</body>
+</html>
